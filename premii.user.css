@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           premii.com
+@namespace      github.com/kane-c/usercss
+@version        1.0.0
+@description    Clean Premii
+@author         @kane-c
+==/UserStyle== */
+
+@-moz-document domain("premii.com") {
+  body {
+    color: #1d1d1f;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -.022em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #ddd;
+    }
+  }
+}

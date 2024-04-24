@@ -1,0 +1,111 @@
+/* ==UserStyle==
+@name           1001tracklists
+@namespace      github.com/kane-c/usercss
+@version        1.0.0
+@description    Clean 1001tracklists
+@author         @kane-c
+==/UserStyle== */
+
+@-moz-document domain("1001tracklists.com") {
+  /* Nicer colours */
+  :root {
+    --body-color: #fff;
+    --head-bg-color: #f1f5f9;
+    --alt-bg-color: #f1f5f9;
+    --border-color: #e2e8f0;
+    --link-color: #3b82f6;
+  }
+
+  /* Nicer text (from Apple.com) */
+  body {
+    color: #1d1d1f;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -.022em;
+  }
+
+  /* Remove the navbar */
+  #navBar2,
+  #naviLogo,
+  #navBar .navBtn {
+    display: none;
+  }
+
+  /* Remove latest stories */
+  #lSt {
+    display: none;
+  }
+
+  /* Remove the ad */
+  #left + div {
+    display: none !important;
+  }
+
+  /* Fix the border radius */
+  .mItems .mTabH {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  /* Remove the shadows */
+  .bItm, .bItmH, .fTab, .mItems {
+    box-shadow: none;
+  }
+
+  .bItmH {
+    background: none;
+    padding: 0;
+    border: 0;
+  }
+
+  .bItm {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    margin-top: 0 !important;
+    padding: 1.5rem 0;
+  }
+
+  .bItm:hover {
+    border-color: var(--border-color);
+    box-shadow: none;
+  }
+
+  .bCont.tl {
+    align-content: center;
+  }
+
+  .bCont .fa-external-link {
+    display: none;
+  }
+
+  .trackLabel {
+    display: none;
+  }
+
+  .bPlay {
+    margin-top: 1em;
+  }
+
+  .bPlay span {
+    display: none;
+  }
+
+  /* Remove the sharing options */
+  .h:has(+ .jcSa) {
+    display: none;
+  }
+
+  .jcSa {
+    display: none;
+  }
+
+  /* Remove the junk from the track items */
+  .tlpItem .halfOpacity,
+  .bItm .fa-bars,
+  .mediaRow,
+  .noUser {
+    display: none;
+  }
+}

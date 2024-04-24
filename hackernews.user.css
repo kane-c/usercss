@@ -1,0 +1,64 @@
+/* ==UserStyle==
+@name           Hacker News
+@namespace      github.com/kane-c/usercss
+@version        1.0.0
+@description    Clean Hacker News
+@author         @kane-c
+==/UserStyle== */
+
+@-moz-document domain("news.ycombinator.com") {
+  body {
+    color: #1d1d1f;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -webkit-font-smoothing: antialiased;
+    font-size: 17px;
+    letter-spacing: -.022em;
+    line-height: 1.47059;
+    margin: 0 auto;
+    width: 816px;
+  }
+
+  #hnmain {
+    background: none;
+    width: 100%;
+  }
+
+  table,
+  td,
+  .title,
+  .subtext,
+  .default,
+  .comhead,
+  .comment {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .comhead {
+    font-weight: bold;
+  }
+
+  .votelinks {
+    width: 1px;
+  }
+
+  .votelinks a,
+  #hnmain > tbody > tr:last-child {
+    display: none;
+  }
+
+  .default,
+  .comhead a:link,
+  .subtext {
+    color: #6e6e73;
+  }
+
+  .default p {
+    margin: 0 0 1em 0;
+  }
+
+  .c00, .coo a:link {
+    color: #1d1d1f;
+  }
+}

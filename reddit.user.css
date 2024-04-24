@@ -1,0 +1,180 @@
+/* ==UserStyle==
+@name           Clean Reddit
+@namespace      github.com/kane-c/usercss
+@version        1.0.0
+@description    Clean Reddit
+@author         @kane-c
+==/UserStyle== */
+@-moz-document domain("old.reddit.com") {
+  body {
+    color: #333;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .content {
+    margin: 0 1rem;
+  }
+
+  .midcol,
+  .rank {
+    display: none;
+  }
+
+  .link {
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  .link .title {
+    font-size: 15px;
+    margin-bottom: 0.25rem;
+  }
+
+  .thing {
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+
+  .thing:first-child {
+    border-top: 0;
+  }
+
+  .thing .title {
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  .thing.stickied.link a.title {
+    font-weight: normal;
+  }
+
+  .title span {
+    order: 1;
+  }
+
+  .top-matter .tagline {
+    display: inline-flex;
+    font-size: 0;
+    vertical-align: top;
+  }
+
+  .tagline .live-timestamp,
+  .tagline .subreddit,
+  .tagline .author {
+    font-size: 0.8rem;
+    margin: 0 0.5rem 0 0;
+    order: 2;
+  }
+
+  .tagline .subreddit {
+    order: 1;
+    color: inherit;
+    font-weight: bold;
+  }
+
+  .tagline .userattrs,
+  .tagline .awardings-bar {
+    display: none;
+  }
+
+  .link .flat-list {
+    display: inline;
+    padding: 0;
+  }
+
+  .entry .buttons li a {
+    font-weight: inherit;
+    font-size: 0.75rem;
+  }
+
+  .share,
+  .save-button,
+  .hide-button,
+  .report-button {
+    display: none !important;
+  }
+
+  .thumbnail {
+    margin-right: 0.75rem;
+  }
+
+  #header {
+    background: inherit;
+  }
+
+  #sr-header-area {
+    background: inherit;
+    border: 0;
+  }
+
+  .sr-list,
+  #sr-more-link {
+    display: none;
+  }
+
+  /* Side bar: Hide everything except search */
+  .side .spacer {
+    display: none;
+  }
+
+  .side .spacer:first-child {
+    display: block;
+  }
+
+  .seo-comments, .seo-comments-recommendations, #bottom-comments {
+  display: none;
+}
+  .footer-parent,
+  .debuginfo {
+    display: none;
+  }
+
+  .commentsignupbar {
+    display: none;
+  }
+
+  .comment .flat-list li:not(.first) {
+    display: none;
+  }
+
+
+  .link .usertext-body .md {
+    background: none;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .link:not(.stickied) .title {
+    color: inherit !important;
+  }
+
+  /* Hide guilded tab */
+  #header-bottom-left li:nth-child(6) {
+    display: none;
+  }
+  /*
+  .seo-comments, .seo-comments-recommendations, #bottom-comments {
+  display: none;
+}
+
+.arrow.login-required {
+  visibility: hidden;
+}
+
+.rank {
+  display: none;
+}
+
+.share, .save-button, .hide-button, .report-button {
+  display: none !important;
+}
+
+.read-next-container {
+  display: none;
+}
+
+
+  */
+}
