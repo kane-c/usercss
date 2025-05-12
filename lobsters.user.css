@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           lobste.rs
 @namespace      github.com/kane-c/usercss
-@version        1.0.0
+@version        2.0.0
 @description    Clean Lobsters
 @author         @kane-c
 ==/UserStyle== */
@@ -20,12 +20,11 @@
     line-height: 1.47059;
   }
 
-  #logo,
   .voters,
-  .byline a + span,
   .comment_form_container,
-  .description_present {
-    display: none;
+  .description_present,
+  .merge {
+    display: none !important;
   }
 
   header#nav {
@@ -34,6 +33,10 @@
 
   a:hover {
     text-decoration: underline;
+  }
+  
+  ol.stories li.story div.story_liner {
+    display: block;
   }
 
   .comments_label a {
