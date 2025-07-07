@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean Reddit
 @namespace      github.com/kane-c/usercss
-@version        1.0.1
+@version        1.0.2
 @description    Clean Reddit
 @author         @kane-c
 @updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/reddit.user.css
@@ -75,11 +75,19 @@
     vertical-align: top;
   }
 
+  .link .tagline {
+    margin: 0;
+  }
+
+  .tagline {
+    line-height: 1;
+  }
+
   .tagline .live-timestamp,
   .tagline time,
   .tagline .subreddit,
   .tagline .author {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     margin: 0 0.5rem 0 0;
     order: 2;
   }
@@ -98,6 +106,10 @@
   .link .flat-list {
     display: inline;
     padding: 0;
+  }
+
+  .entry .buttons li {
+    line-height: 1;
   }
 
   .entry .buttons li a {
@@ -197,6 +209,29 @@
 
 
   */
+
+  .flairrichtext {
+    background: #eee !important;
+    border: 0;
+    color: #333;
+    font-size: inherit;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .search-result-meta,
+  .search-score {
+    font-size: 0.75rem;
+  }
+
+  .search-result-icon-score {
+    display: none;
+  }
+
+  .expando-button,
+  .expando-button.image {
+    margin: 0 0.5rem 0 0;
+  }
 
   @media (prefers-color-scheme: dark) {
     .content {

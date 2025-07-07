@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           premii.com
 @namespace      github.com/kane-c/usercss
-@version        1.0.1
+@version        1.0.2
 @description    Clean Premii
 @author         @kane-c
 @updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/premii.user.css
@@ -31,5 +31,29 @@
     body {
       color: #ddd;
     }
+  }
+
+  .story[href^="https://v.redd.it"] .thumb:after
+  {
+    color: rgba(255, 255, 255, 0.8);
+    content: "▶";
+    display: block;
+    font-size: 2rem;
+    height: 64px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0px 1px 0.25rem rgba(0, 0, 0, 0.5);
+    top: 1.25rem;
+    width: 64px;
+  }
+
+  .kid[data-author="AutoModerator"] {
+    display: none;
+  }
+
+  html {
+    -theme-background-color-light: #fff;
+    -theme-background-color-lighter: #fff;
+    -theme-background-color-lighter-dark: #fff;
   }
 }
