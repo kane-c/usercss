@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name           Clean ChatGPT
+@namespace      github.com/kane-c/stylus
+@version        1.0.0
+@description    Clean for anonymous usage
+@author         @kane-c
+@updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/chatgpt.user.css
+==/UserStyle== */
+@-moz-document domain("chatgpt.com") {
+  /* ChatGPT front page title */
+  h1,
+  /* Top nav with login buttons */
+  #page-header,
+  /* Terms popup */
+  #thread-bottom div[role=button]>.absolute,
+  /* Disclaimer */
+  #thread-bottom~div,
+  /* Voice button */
+  button[aria-label="Start voice mode"] {
+    display: none !important;
+  }
+
+  /* Remove space after removing nav */
+  :root {
+    --header-height: 0;
+  }
+
+  /* Add space after removing disclaimer */
+  #thread-bottom {
+    margin-bottom: 1rem;
+  }
+}

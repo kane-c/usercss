@@ -1,18 +1,31 @@
 /* ==UserStyle==
 @name           Hacker News
 @namespace      github.com/kane-c/usercss
-@version        1.0.0
+@version        1.0.1
 @description    Clean Hacker News
 @author         @kane-c
+@updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/hackernews.user.css
 ==/UserStyle== */
-
 @-moz-document domain("news.ycombinator.com") {
   body {
     color: #1d1d1f;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family:
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      "Noto Sans",
+      "Liberation Sans",
+      Arial,
+      sans-serif,
+      "Apple Color Emoji",
+      "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Noto Color Emoji";
     -webkit-font-smoothing: antialiased;
     font-size: 17px;
-    letter-spacing: -.022em;
+    letter-spacing: -0.022em;
     line-height: 1.47059;
     margin: 0 auto;
     width: 816px;
@@ -35,7 +48,7 @@
     line-height: inherit;
   }
 
-  .comhead {
+  .comhead > a:first-child {
     font-weight: bold;
   }
 
@@ -44,7 +57,9 @@
   }
 
   .votelinks a,
-  #hnmain > tbody > tr:last-child {
+  .reply,
+  form[action="comment"],
+  .fatitem + br {
     display: none;
   }
 
@@ -58,7 +73,12 @@
     margin: 0 0 1em 0;
   }
 
-  .c00, .coo a:link {
+  .c00,
+  .coo a:link {
     color: #1d1d1f;
+  }
+
+  .commtext p:first-child {
+    margin-top: 1rem;
   }
 }
