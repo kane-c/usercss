@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/stylus
-@version        1.0.0
+@version        1.0.1
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/chatgpt.user.css
@@ -12,7 +12,7 @@
   /* Top nav with login buttons */
   #page-header,
   /* Terms popup */
-  #thread-bottom div[role=button]>.absolute,
+  #thread-bottom div.absolute,
   /* Disclaimer */
   #thread-bottom~div,
   /* Voice button */
