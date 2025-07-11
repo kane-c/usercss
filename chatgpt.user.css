@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/stylus
-@version        1.0.2
+@version        1.0.3
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/chatgpt.user.css
@@ -23,6 +23,10 @@
   /* Remove space after removing nav */
   :root {
     --header-height: 0;
+  }
+
+  .-mb-\(--composer-overlap-px\) {
+    margin-bottom: -7.5rem;
   }
 
   /* Add space after removing disclaimer */
