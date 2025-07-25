@@ -4,7 +4,7 @@
 @version        2.0.1
 @description    Clean Lobsters
 @author         @kane-c
-@updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/lobsters.user.css
+@updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/lobsters.user.css
 ==/UserStyle== */
 @-moz-document domain("lobste.rs") {
   body {

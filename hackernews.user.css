@@ -4,7 +4,7 @@
 @version        1.0.1
 @description    Clean Hacker News
 @author         @kane-c
-@updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/hackernews.user.css
+@updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/hackernews.user.css
 ==/UserStyle== */
 @-moz-document domain("news.ycombinator.com") {
   body {

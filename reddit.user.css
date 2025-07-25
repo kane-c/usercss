@@ -4,7 +4,7 @@
 @version        1.0.2
 @description    Clean Reddit
 @author         @kane-c
-@updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/reddit.user.css
+@updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/reddit.user.css
 ==/UserStyle== */
 @-moz-document domain("old.reddit.com") {
   body {
