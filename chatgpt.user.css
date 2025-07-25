@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/stylus
-@version        1.0.3
+@version        1.1.0
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://github.com/kane-c/usercss/raw/refs/heads/main/chatgpt.user.css
@@ -16,7 +16,9 @@
   /* Disclaimer */
   #thread-bottom~div,
   /* Voice button */
-  button[aria-label="Start voice mode"] {
+  button[aria-label="Start voice mode"],
+  /* Ads */
+  body > .popover {
     display: none !important;
   }
 
