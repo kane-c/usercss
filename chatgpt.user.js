@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.1.0
+// @version        1.2.0
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -15,6 +15,10 @@
 h1,
 /* Top nav with login buttons */
 #page-header,
+/* And mobile */
+.sticky.h-header-height,
+/* Starter prompts */
+#page-header+.flex>.flex,
 /* Terms popup */
 #thread-bottom .start-0,
 /* Disclaimer */
