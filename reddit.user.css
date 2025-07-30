@@ -188,26 +188,24 @@
 
   /*
   .seo-comments, .seo-comments-recommendations, #bottom-comments {
-  display: none;
-}
+    display: none;
+  }
 
-.arrow.login-required {
-  visibility: hidden;
-}
+  .arrow.login-required {
+    visibility: hidden;
+  }
 
-.rank {
-  display: none;
-}
+  .rank {
+    display: none;
+  }
 
-.share, .save-button, .hide-button, .report-button {
-  display: none !important;
-}
+  .share, .save-button, .hide-button, .report-button {
+    display: none !important;
+  }
 
-.read-next-container {
-  display: none;
-}
-
-
+  .read-next-container {
+    display: none;
+  }
   */
 
   .flairrichtext {
