@@ -29,14 +29,16 @@ convert() {
   echo "// ==UserScript=="
   echo "$META" | grep '@' | sed 's/^/\/\/ /; s/\.css/.js/'
   echo "$MATCHES" | sed 's/^/\/\/ /'
-  echo "// @grant          GM.addStyle"
   echo "// ==/UserScript==\n"
 
   # Output the JS
-  echo "(function() {"
+  echo '(function() {'
   echo "  'use strict';"
-  printf "  GM.addStyle(\`%s\`);" "$ESCAPED_CSS"
-  echo "})();"
+  echo "  const style = document.createElement('style');"
+  # shellcheck disable=SC2016
+  printf '  style.innerHTML = `%s`;\n' "$ESCAPED_CSS"
+  echo '  document.body.appendChild(style);'
+  echo '})();'
 }
 
 if [ "$#" -eq 0 ]; then
