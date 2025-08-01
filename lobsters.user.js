@@ -1,0 +1,203 @@
+// ==UserScript==
+// @name           Clean lobste.rs
+// @namespace      github.com/kane-c/usercss
+// @version        2.1.0
+// @description    Clean Lobsters
+// @author         @kane-c
+// @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/lobsters.user.js
+// @match          https://*.lobste.rs/*
+// ==/UserScript==
+
+(function() {
+  'use strict';
+  const style = document.createElement('style');
+  style.innerHTML = `body {
+  color: #1d1d1f;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Liberation Sans",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.022em;
+  max-width: 816px;
+}
+
+div.comment_text,
+.story_text {
+  font-size: 17px;
+  line-height: 1.47059;
+  max-width: none;
+}
+
+.upvoter,
+.comment_form_container,
+.description_present,
+.merge {
+  display: none !important;
+}
+
+header#nav {
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ol.stories li.story div.story_liner {
+  display: block;
+}
+
+.list .comments_label a {
+  font-weight: bold;
+  display: inline-block;
+  max-width: 500px;
+}
+
+ol.comments1 > li.comments_subtree {
+  margin: 0;
+}
+
+li .comment_parent_tree_line {
+  top: 30px !important;
+  left: 4px;
+}
+
+.comments_subtree .comments_subtree .comment_parent_tree_line {
+  display: none;
+}
+
+.stories li div.details {
+  margin-left: 0;
+}
+
+.comment .details {
+  margin-left: 22px;
+}
+
+div.morelink {
+  margin-left: -32px;
+}
+
+.story {
+  border-bottom: 1px solid rgb(243, 244, 246);
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.story:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+li .link a {
+  font-size: 24px;
+  letter-spacing: 0.009em;
+  line-height: 1.16667;
+  font-weight: 600;
+}
+
+li .tags {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+a.tag {
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+a.tag:first-child {
+  margin-left: 0;
+}
+
+a.tag_is_media {
+  color: rgb(29, 78, 216);
+}
+
+a.tag_ask,
+a.tag_show {
+  color: var(--color-fg-67) !important;
+}
+
+a.tag_meta {
+  color: rgb(133, 77, 14);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  order: -1;
+}
+
+li .domain {
+  font-style: normal;
+  order: -1;
+}
+
+.details:has(a[href="/~danielrheath"]),
+.details:has(a[href="/~smcleod"]) {
+  background-color: #ffffd6;
+  padding: 0.5rem;
+}
+
+:root {
+  --color-mobile-story-liner-bg: inherit;
+  --color-box-border: transparent;
+  --color-box-bg-shaded: transparent;
+  --color-fg-contrast-4-5: rgb(107, 114, 128);
+  --color-fg-link: inherit;
+  --color-tag-bg: rgb(249 250 251);
+  --color-tag-border: rgb(107 114 128 / 0.1);
+  --color-tag-meta-bg: rgb(254, 252, 232);
+  --color-tag-meta-border: rgb(202 138 4 / 0.2);
+  --color-lobsters-tag-special-bg: rgb(254, 242, 242);
+  --color-lobsters-tag-special-border: rgb(220 38 38 / 0.1);
+  --color-fg-67: rgb(185, 28, 28);
+  --color-tag-media-bg: rgb(239, 246, 255);
+  --color-tag-media-border: rgb(29 78 216 / 0.1);
+  --color-fg-author: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1d1d1f;
+    color: #eee;
+  }
+
+  .story {
+    border-bottom-color: #666;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    margin: 0.5rem 0 0 0.5rem;
+  }
+
+  ol.stories,
+  div#inside > ol.comments {
+    margin: 0;
+  }
+
+  li .link a {
+    font-size: 17px;
+  }
+}`;
+  document.body.appendChild(style);
+})();

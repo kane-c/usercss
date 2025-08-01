@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name           Clean lobste.rs
 @namespace      github.com/kane-c/usercss
-@version        2.0.1
+@version        2.1.0
 @description    Clean Lobsters
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/lobsters.user.css
 ==/UserStyle== */
+
 @-moz-document domain("lobste.rs") {
   body {
     color: #1d1d1f;
@@ -25,7 +26,7 @@
       "Noto Color Emoji";
     -webkit-font-smoothing: antialiased;
     letter-spacing: -0.022em;
-    width: 816px;
+    max-width: 816px;
   }
 
   div.comment_text,
@@ -57,7 +58,7 @@
   .list .comments_label a {
     font-weight: bold;
     display: inline-block;
-    width: 500px;
+    max-width: 500px;
   }
 
   ol.comments1 > li.comments_subtree {
@@ -153,6 +154,9 @@
   }
 
   :root {
+    --color-mobile-story-liner-bg: inherit;
+    --color-box-border: transparent;
+    --color-box-bg-shaded: transparent;
     --color-fg-contrast-4-5: rgb(107, 114, 128);
     --color-fg-link: inherit;
     --color-tag-bg: rgb(249 250 251);
@@ -175,6 +179,21 @@
 
     .story {
       border-bottom-color: #666;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    header {
+      margin: 0.5rem 0 0 0.5rem;
+    }
+
+    ol.stories,
+    div#inside > ol.comments {
+      margin: 0;
+    }
+
+    li .link a {
+      font-size: 17px;
     }
   }
 }
