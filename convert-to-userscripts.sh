@@ -3,7 +3,7 @@ set -e
 
 convert() {
   if [ -z "$1" ]; then
-    echo "Filename required"
+    echo 'Filename required'
     exit 1
   fi
 
@@ -20,16 +20,19 @@ convert() {
 
   # Remove the @-moz-document wrapper
   CSS=$(sed '/@-moz-document/,/^}/!d' "$INPUT" |
-    sed '1d;$d') # Remove first and last line (the @-moz-document { and closing })
+    # Remove first and last line (the @-moz-document { and closing })
+    sed '1d;$d')
 
   # Escape for a JS template string
-  ESCAPED_CSS=$(printf "%s" "$CSS" | sed 's/\\/\\\\/g; s/`/\\`/g; s/^  //')
+  # shellcheck disable=SC2016
+  ESCAPED_CSS=$(printf '%s' "$CSS" | sed 's/\\/\\\\/g; s/`/\\`/g; s/^  //')
 
   # Build the metadata block
-  echo "// ==UserScript=="
+  echo '// ==UserScript=='
   echo "$META" | grep '@' | sed 's/^/\/\/ /; s/\.css/.js/'
   echo "$MATCHES" | sed 's/^/\/\/ /'
-  echo "// ==/UserScript==\n"
+  # shellcheck disable=SC2028
+  echo '// ==/UserScript==\n'
 
   # Output the JS
   echo '(function() {'
