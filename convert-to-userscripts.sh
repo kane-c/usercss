@@ -39,6 +39,13 @@ convert() {
   echo "})();"
 }
 
-for f in *.css; do
-  convert "$f" >"${f%.*}.js"
+if [ "$#" -eq 0 ]; then
+  set -- *.css
+  [ "$1" = '*.css' ] && exit 0
+fi
+
+for css_name in "$@"; do
+  js_name="${css_name%.*}.js"
+  echo "$css_name -> $js_name"
+  convert "$css_name" >"$js_name"
 done
