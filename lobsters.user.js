@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean lobste.rs
 // @namespace      github.com/kane-c/usercss
-// @version        2.1.0
+// @version        2.1.1
 // @description    Clean Lobsters
 // @author         @kane-c
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/lobsters.user.js
@@ -30,6 +30,7 @@
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.022em;
   max-width: 816px;
+  padding: 0;
 }
 
 div.comment_text,
@@ -85,8 +86,15 @@ li .comment_parent_tree_line {
   margin-left: 22px;
 }
 
-div.morelink {
-  margin-left: -32px;
+ol.stories div.voters,
+#inside > ol.comments div.voters {
+  width: auto;
+}
+
+@media screen and (min-width: 480px) {
+  div.morelink {
+    margin-left: -32px;
+  }
 }
 
 .story {
@@ -175,6 +183,12 @@ li .domain {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --color-tag-bg: #333;
+    --color-lobsters-tag-special-bg: hsl(0, 86%, 15%);
+    --color-lobsters-tag-special-border: rgb(220 38 38 / 0.1);
+  }
+
   body {
     background: #1d1d1f;
     color: #eee;
@@ -186,8 +200,14 @@ li .domain {
 }
 
 @media only screen and (max-width: 480px) {
-  header {
-    margin: 0.5rem 0 0 0.5rem;
+  header#nav {
+    height: auto;
+    margin: 0.5rem;
+  }
+
+  header#nav a:last-child {
+    margin-right: 1rem;
+    padding: 0;
   }
 
   ol.stories,
@@ -197,6 +217,15 @@ li .domain {
 
   li .link a {
     font-size: 17px;
+  }
+
+  div.morelink {
+    margin-left: 0;
+  }
+
+  div.voters {
+    margin: 0;
+    width: auto;
   }
 }`;
   document.body.appendChild(style);
