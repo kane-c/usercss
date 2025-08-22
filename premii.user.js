@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.1.0
+// @version        1.1.1
 // @description    Clean Premii
 // @author         @kane-c
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -87,6 +87,7 @@
 .twitter,
 .page-stories span.author,
 /* HN */
+.header .submenu .share,
 .page-comments div.l-menu+.r-menu,
 /* reddit */
 .options-list .web-only,
