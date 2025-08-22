@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           premii.com
 @namespace      github.com/kane-c/usercss
-@version        1.0.2
+@version        1.1.0
 @description    Clean Premii
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.css
@@ -33,6 +33,10 @@
     }
   }
 
+  .page-stories .bd .url {
+    display: inline;
+  }
+
   .story[href^="https://v.redd.it"] .thumb:after
   {
     color: rgba(255, 255, 255, 0.8);
@@ -47,6 +51,21 @@
     width: 64px;
   }
 
+  /* Both */
+  .twitter,
+  .page-stories span.author,
+  /* HN */
+  .page-comments div.l-menu+.r-menu,
+  /* reddit */
+  .options-list .web-only,
+  .footer-container,
+  .header .my-profile-id,
+  .gilded,
+  .page-stories .stories-list .author-flair,
+  .page-comments .article-comments .vote-comment,
+  .page-comments .article-comments .reply-comment,
+  .create-post-container,
+  .share-this,
   .kid[data-author="AutoModerator"] {
     display: none;
   }
