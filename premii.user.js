@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.1.1
+// @version        1.1.2
 // @description    Clean Premii
 // @author         @kane-c
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -65,8 +65,17 @@
   }
 }
 
-.page-stories .bd .url {
-  display: inline;
+/* Remove space before time-ago */
+.story {
+  font-size: 0;
+}
+
+.page-stories .bd span {
+  font-size: 0.86rem;
+}
+
+.page-stories .bd h3 {
+  font-size: 1.07rem;
 }
 
 .story[href^="https://v.redd.it"] .thumb:after
@@ -88,7 +97,7 @@
 .page-stories span.author,
 /* HN */
 .header .submenu .share,
-.page-comments div.l-menu+.r-menu,
+.page-comments div.l-menu + .r-menu,
 /* reddit */
 .options-list .web-only,
 .footer-container,
