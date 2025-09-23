@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.1.2
+// @version        1.2.0
 // @description    Clean Premii
 // @author         @kane-c
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -95,6 +95,9 @@
 /* Both */
 .twitter,
 .page-stories span.author,
+li:has(a[data-track="tweet-premii-setting"]),
+.list-line .donate,
+h3:nth-of-type(2),
 /* HN */
 .header .submenu .share,
 .page-comments div.l-menu + .r-menu,
