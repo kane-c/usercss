@@ -8,9 +8,9 @@
 // @match          https://*.chatgpt.com/*
 // ==/UserScript==
 
-(function() {
-  'use strict';
-  const style = document.createElement('style');
+(function () {
+  "use strict";
+  const style = document.createElement("style");
   style.innerHTML = `/* ChatGPT front page title */
 h1,
 /* Top nav with login buttons */

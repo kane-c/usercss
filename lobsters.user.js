@@ -8,9 +8,9 @@
 // @match          https://*.lobste.rs/*
 // ==/UserScript==
 
-(function() {
-  'use strict';
-  const style = document.createElement('style');
+(function () {
+  "use strict";
+  const style = document.createElement("style");
   style.innerHTML = `body {
   color: #1d1d1f;
   font-family:

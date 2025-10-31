@@ -36,8 +36,8 @@ convert() {
 
   # Output the JS
   echo '(function() {'
-  echo "  'use strict';"
-  echo "  const style = document.createElement('style');"
+  echo '  "use strict";'
+  echo '  const style = document.createElement("style");'
   # shellcheck disable=SC2016
   printf '  style.innerHTML = `%s`;\n' "$ESCAPED_CSS"
   echo '  document.body.appendChild(style);'
