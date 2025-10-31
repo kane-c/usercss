@@ -4,7 +4,9 @@
 // @version        1.2.0
 // @description    Clean Premii
 // @author         @kane-c
+// @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
 // @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
+// @icon           https://hn.premii.com/a/icon/hn/Icon-32.png
 // @match          https://*.premii.com/*
 // ==/UserScript==
 
