@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.2.0
+// @version        1.2.1
 // @description    Clean Premii
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -118,9 +118,9 @@ h3:nth-of-type(2),
 }
 
 html {
-  -theme-background-color-light: #fff;
-  -theme-background-color-lighter: #fff;
-  -theme-background-color-lighter-dark: #fff;
+  --theme-background-color-light: #fff;
+  --theme-background-color-lighter: #fff;
+  --theme-background-color-lighter-dark: #fff;
 }`;
   document.body.appendChild(style);
 })();
