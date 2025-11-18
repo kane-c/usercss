@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.2.1
+// @version        1.3.0
 // @description    Clean Premii
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -14,30 +14,36 @@
   "use strict";
 
   // Disable analytics
-  if (window.helper) {
-    window.helper.enableAnalytics = () => {};
-    window.helper.localAnalytics = () => {};
+  if (typeof unsafeWindow !== "undefined") {
+    unsafeWindow.helper.enableAnalytics = () => {};
+    unsafeWindow.helper.localAnalytics = () => {};
   }
+
+  const site =
+    window.location.hostname === "hn.premii.com" ? "Hacker News" : "reddit";
 
   function updateTitle() {
     const { hash } = window.location;
     let title;
-    if (hash.startsWith("#/comments/")) {
-      const h3 = document.querySelector("h3.title");
-      if (!h3) {
-        title = "Hacker News";
-      } else {
+    if (hash.includes("/comments/")) {
+      const h3 = document.querySelector(".article-meta-items .title");
+      if (h3) {
         title = h3.innerText;
-        title += " | Hacker News";
       }
     } else {
-      title = "Hacker News";
+      title = document.querySelector(
+        site === "Hacker News" ? ".title .bottom" : ".title .top",
+      )?.innerText;
+
+      if (title === "Frontpage") {
+        title = undefined;
+      }
     }
 
-    document.title = title;
+    document.title = title ? `${title} | ${site}` : site;
   }
 
-  window.addEventListener("hashchange", updateTitle);
+  window.addEventListener("popstate", updateTitle);
   updateTitle();
 
   const style = document.createElement("style");
@@ -62,7 +68,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  .theme-dark body {
     color: #ddd;
   }
 }
@@ -80,8 +86,7 @@
   font-size: 1.07rem;
 }
 
-.story[href^="https://v.redd.it"] .thumb:after
-{
+.story[href^="https://v.redd.it"] .thumb:after {
   color: rgba(255, 255, 255, 0.8);
   content: "▶";
   display: block;
@@ -117,7 +122,7 @@ h3:nth-of-type(2),
   display: none;
 }
 
-html {
+.theme-light {
   --theme-background-color-light: #fff;
   --theme-background-color-lighter: #fff;
   --theme-background-color-lighter-dark: #fff;

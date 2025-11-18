@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           premii.com
 @namespace      github.com/kane-c/usercss
-@version        1.2.1
+@version        1.3.0
 @description    Clean Premii
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.css
@@ -28,7 +28,7 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    body {
+    .theme-dark body {
       color: #ddd;
     }
   }
@@ -83,7 +83,7 @@
     display: none;
   }
 
-  html {
+  .thene-light {
     --theme-background-color-light: #fff;
     --theme-background-color-lighter: #fff;
     --theme-background-color-lighter-dark: #fff;
