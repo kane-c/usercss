@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Hacker News
 @namespace      github.com/kane-c/usercss
-@version        1.0.1
+@version        1.1.0
 @description    Clean Hacker News
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/hackernews.user.css
@@ -80,5 +80,24 @@
 
   .commtext p:first-child {
     margin-top: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #111;
+    }
+
+    body,
+    a:link,
+    .c00,
+    .coo a:link {
+      color: #fff;
+    }
+
+    .default,
+    .comhead a:link,
+    .subtext {
+      color: #999;
+    }
   }
 }
