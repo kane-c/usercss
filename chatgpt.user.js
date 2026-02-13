@@ -22,7 +22,7 @@ h1,
 /* Sidebar */
 #stage-slideover-sidebar,
 /* Starter prompts */
-#page-header+.flex>.flex,
+#page-header + .flex > .flex,
 /* Terms popup */
 #thread-bottom .start-0,
 /* Disclaimer */

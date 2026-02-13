@@ -46,8 +46,7 @@
     font-size: 1.07rem;
   }
 
-  .story[href^="https://v.redd.it"] .thumb:after
-  {
+  .story[href^="https://v.redd.it"] .thumb:after {
     color: rgba(255, 255, 255, 0.8);
     content: "▶";
     display: block;
