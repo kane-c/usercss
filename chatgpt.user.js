@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.1
+// @version        1.4.2
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -19,6 +19,8 @@ h1,
 #page-header,
 /* And mobile */
 .sticky.h-header-height,
+/* Sidebar */
+#stage-slideover-sidebar,
 /* Starter prompts */
 #page-header+.flex>.flex,
 /* Terms popup */
@@ -39,11 +41,6 @@ body > .popover {
 
 .-mb-\\(--composer-overlap-px\\) {
   margin-bottom: -7.5rem;
-}
-
-/* Add space after removing disclaimer */
-#thread-bottom {
-  margin-bottom: 1rem;
 }`;
   document.body.appendChild(style);
 
@@ -139,7 +136,6 @@ body > .popover {
       });
 
       promise.then(async () => {
-        console.log(chat);
         chat["text/html"] = chat["text/html"].join("");
         chat["text/plain"] = chat["text/plain"].join("\n\n");
 

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/usercss
-@version        1.3.1
+@version        1.3.2
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.css
@@ -13,6 +13,8 @@
   #page-header,
   /* And mobile */
   .sticky.h-header-height,
+  /* Sidebar */
+  #stage-slideover-sidebar,
   /* Starter prompts */
   #page-header+.flex>.flex,
   /* Terms popup */
@@ -33,10 +35,5 @@
 
   .-mb-\(--composer-overlap-px\) {
     margin-bottom: -7.5rem;
-  }
-
-  /* Add space after removing disclaimer */
-  #thread-bottom {
-    margin-bottom: 1rem;
   }
 }
