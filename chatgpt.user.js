@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.2
+// @version        1.4.3
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -29,6 +29,10 @@ h1,
 #thread-bottom~div,
 /* Voice button */
 button[aria-label="Start Voice"],
+/* Create Image button (requires login) */
+[data-testid="composer-footer-actions"] div > :has([data-testid="composer-button-create-image"]),
+/* Attach menu items requiring login */
+[role=menuitem]:has(.text-token-text-secondary),
 /* Ads */
 body > .popover {
   display: none !important;
