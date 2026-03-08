@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.3
+// @version        1.4.4
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -32,7 +32,11 @@ button[aria-label="Start Voice"],
 /* Create Image button (requires login) */
 [data-testid="composer-footer-actions"] div > :has([data-testid="composer-button-create-image"]),
 /* Attach menu items requiring login */
-[role=menuitem]:has(.text-token-text-secondary),
+.__menu-label,
+.__menu-item[data-disabled="true"],
+div[role="group"]:has(.__menu-label):before,
+  /* Google sign-in on mobile */
+body > iframe,
 /* Ads */
 body > .popover {
   display: none !important;
@@ -54,8 +58,11 @@ body > .popover {
       '[data-testid="composer-footer-actions"] button',
     );
 
-    const lastButtonContainer =
-      composerButtons[composerButtons.length - 1].parentNode;
+    if (!composerButtons.length) {
+      return;
+    }
+
+    const lastButtonContainer = composerButtons[composerButtons.length - 1].parentNode;
     const btnContainer = lastButtonContainer.cloneNode(true);
     const copyButton = btnContainer.querySelector("button");
     copyButton.setAttribute("data-test-id", "composer-button-copy-all");
