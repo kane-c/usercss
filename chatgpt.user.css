@@ -1,14 +1,14 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/usercss
-@version        1.3.4
+@version        1.3.5
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.css
 ==/UserStyle== */
 @-moz-document domain("chatgpt.com") {
   /* ChatGPT front page title */
-  h1,
+  .text-page-header,
   /* Top nav with login buttons */
   #page-header,
   /* And mobile */
