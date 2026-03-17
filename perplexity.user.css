@@ -1,0 +1,66 @@
+/* ==UserStyle==
+@name           Clean Perplexity
+@namespace      github.com/kane-c/usercss
+@version        1.0.0
+@description    Clean for incognito usage
+@author         @kane-c
+@updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/perplexity.user.css
+==/UserStyle== */
+@-moz-document domain("www.perplexity.ai") {
+  /* Remove the ugly background color */
+  html[data-color-scheme="light"]:not(.todesktop) {
+    background-color: #fff !important;
+  }
+
+  :root,
+  [data-color-scheme="light"],
+  .light {
+    --light-background-base-color: 1 0 0;
+    --light-background-raised-color: 1 0 0;
+    --light-super-color: 0.75 0.15 230;
+    --light-foreground-inverse-color: 1 0 0;
+  }
+
+  /* Remove some junk */
+  /* Logo */
+  .\@container\/main .size-full.flex-col,
+    /* Help and translate buttons */
+  x.fixed.bottom-md,
+  /* Sidebar/navbar logo */
+  x.group\/sidebar .h-headerHeight:first-child,
+  /* Unused sidebar buttons */
+  x.h-headerHeight ~ .scrollbar-none .scrollbar-none,
+  xa[data-testid$="-tab"],
+  /* Voice buttons */
+  button[aria-label="Dictation"],
+  button[aria-label="Use voice mode"],
+  /* Unavailable models (Max plan) */
+  div[role=menu] .opacity-50,
+  /* Model council (Max plan) */
+  .group\/search-mode,
+  /* Computer feature */
+  nav > div:first-child > div:first-child,
+  div[data-ask-input-container="true"] button:first-child + div,
+  /* Computer feature popup */
+  #footer-portal-default ~ .pointer-events-auto > div > div > div[style] {
+    display: none !important;
+  }
+
+  /* Show a warning when incognito is off */
+  .\@container\/main:has(button[aria-label^="Use incognito"]) #ask-input:before,
+  .\@container\/main:has(span.inline-block ~ span.inline-block ~ span.inline-block)
+    #ask-input:before {
+    background: #c80000;
+    border-radius: 0.5rem;
+    bottom: 0.25rem;
+    color: #fff;
+    content: "NOT INCOGNITO";
+    font-weight: bold;
+    left: 0;
+    padding: 0.25rem 5rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+  }
+}
