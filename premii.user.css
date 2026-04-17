@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           premii.com
 @namespace      github.com/kane-c/usercss
-@version        1.3.0
+@version        1.3.1
 @description    Clean Premii
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.css
@@ -78,7 +78,8 @@
   .page-comments .article-comments .reply-comment,
   .create-post-container,
   .share-this,
-  .kid[data-author="AutoModerator"] {
+  .kid[data-author="AutoModerator"],
+ .thumb:has(img[src=spoiler]) {
     display: none;
   }
 

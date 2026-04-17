@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.3.0
+// @version        1.3.1
 // @description    Clean Premii
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -118,7 +118,8 @@ h3:nth-of-type(2),
 .page-comments .article-comments .reply-comment,
 .create-post-container,
 .share-this,
-.kid[data-author="AutoModerator"] {
+.kid[data-author="AutoModerator"],
+.thumb:has(img[src=spoiler]) {
   display: none;
 }
 
