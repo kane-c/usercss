@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           premii.com
 // @namespace      github.com/kane-c/usercss
-// @version        1.3.1
+// @version        1.3.2
 // @description    Clean Premii
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/premii.user.js
@@ -14,9 +14,10 @@
   "use strict";
 
   // Disable analytics
-  if (typeof unsafeWindow !== "undefined") {
-    unsafeWindow.helper.enableAnalytics = () => {};
-    unsafeWindow.helper.localAnalytics = () => {};
+  const win = typeof unsafeWindow === "undefined" ? window : unsafeWindow;
+  if (typeof win.helper !== "undefined") {
+    win.helper.enableAnalytics = () => {};
+    win.helper.localAnalytics = () => {};
   }
 
   const site =
