@@ -14,9 +14,9 @@
   "use strict";
 
   // Disable analytics
-  if (typeof unsafeWindow !== "undefined") {
-    unsafeWindow.helper.enableAnalytics = () => {};
-    unsafeWindow.helper.localAnalytics = () => {};
+  if (typeof window.helper !== "undefined") {
+    window.helper.enableAnalytics = () => {};
+    window.helper.localAnalytics = () => {};
   }
 
   const site =
