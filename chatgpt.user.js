@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.5
+// @version        1.4.6
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -14,7 +14,7 @@
   "use strict";
   const style = document.createElement("style");
   style.innerHTML = `/* ChatGPT front page title */
-.text-page-header,
+div[data-splash-headline-option] div div,
 /* Top nav with login buttons */
 #page-header,
 /* And mobile */
@@ -35,7 +35,7 @@ button[aria-label="Start Voice"],
 .__menu-label,
 .__menu-item[data-disabled="true"],
 div[role="group"]:has(.__menu-label):before,
-  /* Google sign-in on mobile */
+/* Google sign-in on mobile */
 body > iframe,
 /* Ads */
 body > .popover {
