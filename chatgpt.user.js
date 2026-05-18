@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.7
+// @version        1.4.8
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -29,6 +29,7 @@ div[data-splash-headline-option] div div,
 #thread-bottom~div,
 /* Voice button */
 button[aria-label="Start dictation"],
+button[aria-label="Start Voice"],
 /* Create Image button (requires login) */
 [data-testid="composer-footer-actions"] div > :has([data-testid="composer-button-create-image"]),
 /* Attach menu items requiring login */
@@ -45,10 +46,6 @@ body > .popover {
 /* Remove space after removing nav */
 :root {
   --header-height: 0;
-}
-
-.-mb-\\(--composer-overlap-px\\) {
-  margin-bottom: -7.5rem;
 }`;
   document.body.appendChild(style);
 

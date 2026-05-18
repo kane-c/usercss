@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean ChatGPT
 @namespace      github.com/kane-c/usercss
-@version        1.3.7
+@version        1.3.8
 @description    Clean for anonymous usage
 @author         @kane-c
 @updateURL      https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.css
@@ -23,6 +23,7 @@
   #thread-bottom~div,
   /* Voice button */
   button[aria-label="Start dictation"],
+  button[aria-label="Start Voice"],
   /* Create Image button (requires login) */
   [data-testid="composer-footer-actions"] div > :has([data-testid="composer-button-create-image"]),
   /* Attach menu items requiring login */
@@ -39,9 +40,5 @@
   /* Remove space after removing nav */
   :root {
     --header-height: 0;
-  }
-
-  .-mb-\(--composer-overlap-px\) {
-    margin-bottom: -7.5rem;
   }
 }
