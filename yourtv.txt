@@ -1,0 +1,40 @@
+[Adblock Plus 2.0]
+! Title: Clean YourTV.com.au
+! Description: Clean the layout of YourTV to remove ads, junk channels, etc.
+! Last modified: 2026-06-01 15:30
+! Expires: 2 weeks (update frequency)
+! Homepage: https://github.com/kane-c/usercss
+! License: https://github.com/kane-c/usercss/blob/main/LICENSE
+
+! Streaming links
+www.yourtv.com.au##.guide__row--sticky
+www.yourtv.com.au##.channel-icon[data-channel-number=""]
+www.yourtv.com.au##.catchup
+www.yourtv.com.au##.channel-icon__cta
+www.yourtv.com.au##.promo
+www.yourtv.com.au##.show-down__related--content
+www.yourtv.com.au##.catchup-widget
+www.yourtv.com.au##.show__links__bing
+! Mobile
+www.yourtv.com.au##.show-down__content__video
+www.yourtv.com.au##.show-down__9now
+www.yourtv.com.au##.show-down__adkit--mobile
+www.yourtv.com.au##.advert-adkit-sticky
+www.yourtv.com.au##.show__episodes
+! Ad channels
+www.yourtv.com.au##[data-channel-name="RACING.COM"]
+www.yourtv.com.au##[data-channel-name="Extra"]
+www.yourtv.com.au##[data-channel-name="TVSN"]
+www.yourtv.com.au##[data-channel-name="gecko"]
+www.yourtv.com.au##[data-channel-name="you.tv"]
+! Prefer HD channels (deduplicate)
+www.yourtv.com.au##[data-channel-name="10"]
+www.yourtv.com.au##[data-channel-number="70"]
+www.yourtv.com.au##[data-channel-name="SBS"]
+www.yourtv.com.au##[data-channel-name="ABC TV"]
+www.yourtv.com.au##[data-channel-name="Nine"]
+www.yourtv.com.au##[data-channel-name="NITV"]
+! Clean layout
+www.yourtv.com.au##header
+www.yourtv.com.au##footer
+www.yourtv.com.au##.mbanner-wrapper
