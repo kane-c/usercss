@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Clean ChatGPT
 // @namespace      github.com/kane-c/usercss
-// @version        1.4.8
+// @version        1.4.9
 // @description    Clean for anonymous usage
 // @author         @kane-c
 // @downloadURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/chatgpt.user.js
@@ -17,16 +17,21 @@
 div[data-splash-headline-option] div div,
 /* Top nav with login buttons */
 #page-header,
+.wm-swipe-detailHeader,
 /* And mobile */
 .sticky.h-header-height,
 /* Sidebar */
 #stage-slideover-sidebar,
+aside,
 /* Starter prompts */
 #page-header + .flex > .flex,
+.wm-app-landingHeading,
+.wm-app-emptyComposerAction,
 /* Terms popup */
 #thread-bottom .start-0,
 /* Disclaimer */
 #thread-bottom~div,
+.wm-app-privacyPositioner,
 /* Voice button */
 button[aria-label="Start dictation"],
 button[aria-label="Start Voice"],
@@ -41,6 +46,10 @@ body > iframe,
 /* Ads */
 body > .popover {
   display: none !important;
+}
+
+.wm-app-appShell {
+  --wm-desktop-sidebar-width: 0;
 }
 
 /* Remove space after removing nav */
