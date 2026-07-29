@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anti-marketplace
 // @namespace    github.com/kane-c/usercss
-// @version      1.2.1
+// @version      1.3.0
 // @description  Excludes Marketplace results from Australian retailers. Companion of the adblock filter list: https://github.com/danielnixon/anti-marketplace
 // @author       @kane-c
 // @downloadURL  https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/antimarketplace.user.js
@@ -25,7 +25,8 @@
 
   const url = new URL(window.location.href);
 
-  const [param, expectedValues] = siteRules[url.hostname.split('.')[1]];
+  const [, site] = url.hostname.split('.');
+  const [param, expectedValues] = siteRules[site];
   const values = Array.isArray(expectedValues) ? expectedValues : [expectedValues];
   const currentValues = url.searchParams.getAll(param);
   let changed = false;
@@ -38,5 +39,15 @@
 
   if (changed) {
     window.location.replace(url.toString());
+    return;
+  }
+
+  if (site === 'woolworths') {
+    // Fix Cmd+click
+    window.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        event.stopImmediatePropagation();
+      }
+    }, true);
   }
 })();
