@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Anti-marketplace
 // @namespace    github.com/kane-c/usercss
-// @version      1.2.0
+// @version      1.2.1
 // @description  Excludes Marketplace results from Australian retailers. Companion of the adblock filter list: https://github.com/danielnixon/anti-marketplace
 // @author       @kane-c
 // @downloadURL  https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/antimarketplace.user.js
 // @updateURL    https://raw.githubusercontent.com/kane-c/usercss/refs/heads/main/antimarketplace.user.js
 // @match        https://www.kmart.com.au/search/*searchTerm*
-// @match        https://www.woolworths.com.au/shop/search/products?*
+// @match        https://www.woolworths.com.au/shop/search/products*
 // @match        https://www.woolworths.com.au/shop/browse/*
 // @match        https://www.jbhifi.com.au/search*
 // @match        https://www.jbhifi.com.au/collections/*
